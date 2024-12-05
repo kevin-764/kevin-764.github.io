@@ -6,41 +6,217 @@
         <title>VISUALIZATION</title>
         <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.0/dist/echarts.min.js"></script>
         <style>
-            /* 使图表自适应父级div的大小 */
+            * {
+                margin: 0;
+                padding: 0;
+            }
             body {
-                background-color: rgb(255, 255, 255);
+                padding-left: 200px;
+                padding-right: 200px;
             }
-            #chart1 {
-                width: 100%;
-                height: 500px; /* 高度可以根据需要调整 */
-            }
-            #chart2 {
-                width: 100%;
-                height: 500px; /* 高度可以根据需要调整 */
-            }
-            .chat_title {
+            .title_1 {
                 text-align: center;
+                font-size: 40px;
+                font-weight: 800;
+                font-family: "NSimSun";
             }
-            .chat_detail {
+            .title_2 {
                 text-align: center;
+                font-size: 20px;
+                color: #666666;
+                font-weight: 300;
+            }
+            .get_started {
+                width: 171px;
+                height: 55px;
+                /* background-color: #666666; */
+                background-image: url("./resources/pic1.png");
+                background-size: cover;
+                background-position: center;
+                cursor: pointer;
+
+                transition: all 0.5s ease-in-out;
+            }
+            .get_started:hover {
+                filter: drop-shadow(0 0 0.75rem rgba(20, 33, 220, 0.452));
+            }
+            .intro_box {
+                margin-top: 40px;
+                height: 400px;
+                width: 100%;
+                /* background-color: aquamarine; */
+                border-radius: 10px;
+                background-image: url("./resources/pic2.png");
+                background-size: cover;
+                background-position: center;
+            }
+            .chart1_title {
+                margin-top: 40px;
+                height: 60px;
+                display: grid;
+                grid-template-columns: 60px 1fr;
+            }
+            .chart1_title > div:first-child {
+                border-radius: 10px;
+                background-color: #000000;
+                color: aliceblue;
+                text-align: center;
+                line-height: 60px;
+                font-size: 40px;
+                font-weight: 800;
+            }
+
+            .chart1_title > div:nth-child(2) > p:first-child {
+                /* padding-left: 20px; */
+                font-size: 30px;
+                font-weight: 800;
+                font-family: "NSimSun";
+            }
+            .chart1_title > div:nth-child(2) > p:nth-child(2) {
+                /* padding-left: 20px; */
+                font-size: 20px;
+                color: #666666;
+                font-weight: 300;
+            }
+            .chart1_title > div:nth-child(2) > p {
+                padding-left: 20px;
+            }
+            .chart1_box {
+                margin-top: 40px;
+                height: 500px;
+                /* background-color: aqua; */
+                width: 100%;
+                border-radius: 10px;
+                border: 1px solid #333333;
+            }
+            .chart2_title {
+                margin-top: 40px;
+                height: 60px;
+                display: grid;
+                grid-template-columns: 1fr 60px;
+            }
+            .chart2_title > div:nth-child(2) {
+                border-radius: 10px;
+                background-color: #000000;
+                color: aliceblue;
+                text-align: center;
+                line-height: 60px;
+                font-size: 40px;
+                font-weight: 800;
+            }
+            .chart2_title > div:nth-child(1) > p:first-child {
+                /* padding-left: 20px; */
+                font-size: 30px;
+                font-weight: 800;
+                font-family: "NSimSun";
+                text-align: right;
+                padding-right: 20px;
+            }
+            .chart2_title > div:nth-child(1) > p:nth-child(2) {
+                /* padding-left: 20px; */
+                font-size: 20px;
+                color: #666666;
+                font-weight: 300;
+                text-align: right;
+                padding-right: 20px;
+            }
+            .chart2_box {
+                margin-top: 40px;
+                height: 500px;
+                /* background-color: aqua; */
+                width: 100%;
+                border-radius: 10px;
+                border: 1px solid #333333;
+            }
+            .foot_end {
+                margin-top: 60px;
+                width: 100%;
+                height: 200px;
+                background: linear-gradient(
+                    259deg,
+                    #4481cc 3.2%,
+                    #3338b3 93.4%
+                );
+                border-radius: 10px 10px 0px 0px;
+            }
+            .foot_end > p {
+                text-align: center;
+                color: rgb(255, 255, 255);
             }
         </style>
     </head>
     <body>
-        <!-- 图表容器 -->
-        <h1 class="chat_title">
-            Social media Sentiment Index and BTC price line chart
-        </h1>
-        <h4 class="chat_detail">
-            The sentiment index was calculated using vaderSentiment
-        </h4>
-        <div id="chart1"></div>
-        <h1 class="chat_title">Social media activity and BTC volume</h1>
-        <h4 class="chat_detail">
-            User activity is calculated based on the number of monthly posts
-        </h4>
-        <div id="chart2"></div>
-        <script>
+        <div style="height: 40px"></div>
+        <p class="title_1">Visualization for BTC & Social media Data</p>
+        <p class="title_2">analysis | design | develop By xxxxxxxxx</p>
+        <div style="height: 80px; display: grid; place-items: center">
+            <div class="get_started"></div>
+        </div>
+        <div class="intro_box">
+            <p
+                style="
+                    padding-top: 80px;
+                    padding-left: 80px;
+                    color: aliceblue;
+                    font-size: 24px;
+                    font-weight: 800;
+                "
+            >
+                Introduction
+            </p>
+            <p
+                style="
+                    word-wrap: break-word;
+                    word-break: break-all;
+                    width: 400px;
+                    margin-top: 20px;
+                    padding-left: 80px;
+                    color: aliceblue;
+                "
+            >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit
+            </p>
+        </div>
+        <div class="chart1_title">
+            <div>1</div>
+            <div>
+                <p>Social media Sentiment Index and BTC price line chart</p>
+                <p>this is the description of this chart</p>
+            </div>
+        </div>
+        <div class="chart1_box" id="chart1"></div>
+        <div class="chart2_title">
+            <div>
+                <p>Social media Sentiment Index and BTC price line chart</p>
+                <p>this is the description of this chart</p>
+            </div>
+            <div>2</div>
+        </div>
+        <div class="chart2_box" id="chart2"></div>
+        <div class="chart1_title">
+            <div>3</div>
+            <div>
+                <p>wait to be developed</p>
+                <p>this is the description of this chart</p>
+            </div>
+        </div>
+        <div class="chart1_box" id="chart3"></div>
+        <div class="foot_end">
+            <p style="padding-top: 40px; font-size: 24px; font-weight: 800">
+                Thanks for watching
+            </p>
+            <p style="padding-top: 20px">thisisemail@qq.com</p>
+            <p>my name</p>
+        </div>
+    </body>
+    <script>
+        drawChart1();
+        drawChart2();
+        function drawChart1() {
             // 初始化图表实例
             var myChart1 = echarts.init(document.getElementById("chart1"));
 
@@ -53,6 +229,7 @@
                     trigger: "axis",
                 },
                 legend: {
+                    top: 25,
                     data: ["Sentiment index", "Average price"],
                 },
                 xAxis: {
@@ -336,9 +513,8 @@
             window.addEventListener("resize", function () {
                 myChart1.resize();
             });
-
-            //----------------------------图表2-----------------------------
-
+        }
+        function drawChart2() {
             // 初始化图表
             var myChart2 = echarts.init(document.getElementById("chart2"));
 
@@ -523,7 +699,7 @@
                 },
                 legend: {
                     data: ["Bitcoin volume", "User activity"],
-                    top: "0%",
+                    top: 25,
                 },
                 xAxis: {
                     type: "category",
@@ -536,7 +712,19 @@
                         name: "Bitcoin volume",
                         position: "left",
                         axisLine: { lineStyle: { color: "#FFBB0E" } },
-                        axisLabel: { formatter: "{value}" },
+                        // axisLabel: { formatter: "{value}" },
+                        axisLabel: {
+                            formatter: function (value) {
+                                // 将数值转换为带单位的格式
+                                if (value >= 1000000) {
+                                    return value / 1000000 + "m";
+                                } else if (value >= 1000) {
+                                    return value / 1000 + "k";
+                                } else {
+                                    return value;
+                                }
+                            },
+                        },
                     },
                     {
                         type: "value",
@@ -575,6 +763,6 @@
             window.addEventListener("resize", function () {
                 myChart2.resize();
             });
-        </script>
-    </body>
+        }
+    </script>
 </html>
